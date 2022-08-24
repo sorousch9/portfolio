@@ -65,12 +65,12 @@
       left: 30%;
 
       img {
-        width: 60px;
+        width: 40px;
         animation: arrowBlink 2s infinite;
       }
       @keyframes arrowBlink {
         100% {
-          opacity: 10%;
+          opacity: 0%;
         }
       }
     }

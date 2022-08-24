@@ -2,7 +2,8 @@ import "./portfolioList.scss";
 
 export const PortfolioList = ({ id, title, active, setSelected }) => {
   return (
-    <li
+    <li 
+  
       className={active ? "portfolioList active" : "portfolioList"}
       onClick={() => setSelected(id)}
     >

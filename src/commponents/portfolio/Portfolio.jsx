@@ -1,5 +1,6 @@
 import "./portfolio.scss";
 import { PortfolioList } from "../portfolioList/PortfolioList";
+import { useEffect, useState } from "react";
 import {
   countenancePortfolio,
   webPortfolio,
@@ -7,7 +8,7 @@ import {
   designPortfolio,
   contentPortfolio,
 } from "../../data";
-import { useEffect, useState } from "react";
+
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("countenance");
@@ -37,7 +38,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
+      case "countenance":
         setData(countenancePortfolio);
         break;
       case "web":
@@ -58,13 +59,14 @@ export default function Portfolio() {
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="portfolio" id="portfolio"> 
       <div>
         <h1>Portfolio</h1>
       </div>
       <div className="portoDiv">
-        <ul>
+        <ul >
           {list.map((item) => (
+           
             <PortfolioList
               title={item.title}
               active={selected === item.id}
