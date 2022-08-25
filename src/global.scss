@@ -1,1 +1,23 @@
 $mainColor : rgba(140, 0, 255);
+
+$widthL : 1530px;
+
+$widthM :1333px;
+
+$widthS :750px;
+
+@mixin mobile {
+    @media (max-width: #{$widthS}){
+        @content
+    }
+};
+@mixin laptop {
+    @media (max-width: #{$widthL}){
+        @content
+    }
+};
+@mixin tablet {
+    @media (max-width: #{$widthM}){
+        @content
+    }
+}

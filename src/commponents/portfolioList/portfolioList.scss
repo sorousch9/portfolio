@@ -11,6 +11,12 @@
   margin-top: 16px;
   cursor: pointer;
   transition: all 0.3s;
+  @include mobile{
+    width: inherit;
+    height: inherit;
+    margin-right: 5px;
+    flex-direction: auto;
+  }
 
 
   &.active {
