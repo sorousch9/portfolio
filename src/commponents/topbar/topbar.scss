@@ -1,9 +1,9 @@
 @import "../../global.scss";
 
 .topbar {
-  color: white;
+  color: $mainColor;
   transition: all 1s ease;
-  background-color: $mainColor;
+  background-color: white;
   width: 100%;
   height: 70px;
   position: fixed;
@@ -18,26 +18,28 @@
     .left {
       display: flex;
       align-items: center;
+      img{
+        padding-left: 30px;
+        height: 30px;
+        width: 60px;
+      }
+
       .logo {
         font-size: 40px;
         font-weight: 700;
         text-decoration: none;
         color: inherit;
         margin-right: 40px;
+        
       }
       .itemContainer {
         display: flex;
         align-items: center;
-        margin-left: 30px;
-        .icon {
-          font-size: 16px;
-          margin-right: 8px;
-        }
-        span {
-          font-size: 18px;
-          font-weight: 400;
-        }
+        margin-left: 40px;
+       
+        
       }
+      
     }
 
     .right {
@@ -55,7 +57,7 @@
         span {
           width: 100px;
           height: 3px;
-          background-color: white;
+          background-color: $mainColor;
           transform-origin: left;
           transition: all 2s ease;
         }
@@ -64,19 +66,19 @@
   }
   &.active {
     
-    background-color: white;
+    background-color: $mainColor;
     color: $mainColor;
 
     .hamburger span {
       &:first-child {
-        background-color: $mainColor;
+        background-color: #fff;
         transform: rotate(45deg);
       }
       &:nth-child(2) {
         opacity: 0;
       }
       &:last-child {
-        background-color: $mainColor;
+        background-color: #fff;
         transform: rotate(-45deg);
       }
     }

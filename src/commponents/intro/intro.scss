@@ -3,27 +3,16 @@
 .intro {
   background-color: white;
   display: flex;
-
+  align-items: center;
   .left {
-    flex: 0.5;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    .imgContainer {
-      width: 700px;
-      height: 700px;
-      display: flex;
-      align-items: flex;
-      justify-content: center;
-
-      img {
-        height: 99%;
-      }
-    }
-  }
-  .right {
-    flex: 0.5;
+    flex: 0.3;
     position: relative;
+    
+
+    @include mobile {
+      flex: 0.5;
+    }
+
     .wrapper {
       width: 100%;
       height: 100%;
@@ -31,32 +20,70 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+     
 
       h1 {
-        font-size: 60px;
+        font-size: 50px;
         margin: 10px 0;
+
       }
       h2 {
-        font-size: 35px;
+        font-size: 30px;
       }
-      h3 {
+    }
+  }
+
+  .center {
+    flex: 0.4;
+    &::-webkit-scrollbar {
+      display: none;
+
+    }
+    @include mobile {
+      flex: 0.5;
+    }
+  }
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    height: 810px;
+
+  }
+  .right {
+    flex: 0.3;
+    justify-content: center;
+    @include mobile {
+      display: none;
+    }
+    h2 {
+      margin-left: 10px;
+    }
+
+    h3 {
+      font-size: 28px;
+      animation: blink 3s infinite;
+      margin-left: 10px;
+
+      span {
         font-size: 28px;
-        animation: blink 3s infinite;
-        
-        span {
-          font-size: 28px;
-          color: $mainColor;
-        }
-        @keyframes blink {
-            50%{
-                opacity: 1;
-            }
-            100%{
-                opacity: 0;
-            }
+        color: $mainColor;
       }
-      
-        
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+    h4 {
+      margin-left: 10px;
+      padding-right: 90px;
+    }
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0%;
       }
     }
     a {
@@ -65,13 +92,8 @@
       left: 30%;
 
       img {
-        width: 40px;
+        width: 30px;
         animation: arrowBlink 2s infinite;
-      }
-      @keyframes arrowBlink {
-        100% {
-          opacity: 0%;
-        }
       }
     }
   }
