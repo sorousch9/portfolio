@@ -5,6 +5,7 @@
   text-align: center;
   flex-direction: column;
   align-items: center;
+ 
   &::-webkit-scrollbar {
     display: none;
     }
@@ -18,6 +19,7 @@
     flex-wrap: wrap;
     display: flex;
     margin-top: 10px;
+
    
     
   
@@ -39,6 +41,7 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
+      
       
       
       
@@ -73,7 +76,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-          z-index: 1;
+          z-index: auto;
         }
 
         &:hover {
