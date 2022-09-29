@@ -6,7 +6,7 @@ export default function Intro() {
       <div className="left">
         <div className="wrapper">
           <h2>Hallo, ich bin </h2>
-          <h1>Soroush Safar </h1>
+          <h1>Raw </h1>
         </div>
       </div>
       <div className="center">
