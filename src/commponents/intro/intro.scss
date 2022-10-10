@@ -1,13 +1,16 @@
 @import "../../global.scss";
 
 .intro {
-  background-color: white;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   display: flex;
   align-items: center;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
   .left {
     flex: 0.3;
     position: relative;
-    
 
     @include mobile {
       flex: 0.5;
@@ -20,12 +23,18 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-     
+      @include mobile {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
 
       h1 {
         font-size: 50px;
         margin: 10px 0;
-
       }
       h2 {
         font-size: 30px;
@@ -37,23 +46,30 @@
     flex: 0.4;
     &::-webkit-scrollbar {
       display: none;
-
     }
     @include mobile {
       flex: 0.5;
     }
   }
   .imgContainer {
+    width: 100%;
+    height: 80vh;
     display: flex;
     justify-content: center;
-    height: 810px;
-
+    @include mobile {
+      height: 100%;
+      width: 100%;
+    }
   }
   .right {
     flex: 0.3;
     justify-content: center;
     @include mobile {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
     }
     h2 {
       margin-left: 10px;
@@ -80,6 +96,14 @@
     h4 {
       margin-left: 10px;
       padding-right: 90px;
+      @include mobile {
+        margin-left: 0px;
+      padding: 10px;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      
     }
     @keyframes arrowBlink {
       100% {
@@ -90,10 +114,17 @@
       position: absolute;
       bottom: 10px;
       left: 30%;
+      ::after{
+        content: "scroll down";
+      }
+      @include mobile {
+        left: 50%;
+      }
 
       img {
         width: 30px;
         animation: arrowBlink 2s infinite;
+       
       }
     }
   }
